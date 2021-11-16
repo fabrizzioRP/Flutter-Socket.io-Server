@@ -20,13 +20,13 @@
 
         client.emit('mensaje', {from : 'desde la web'});
 
-        client.on('response', payload => console.log('response : ',payload));
+        //client.on('response', payload => console.log('response : ',payload));
 
         client.on('from-flutter2', payload => console.log('response from flutter : ',payload['name']));
 
         client.on('active-bands', data => {
             console.clear();
-            console.table(data);
+            console.table({data});
         });
 
     </script>
